@@ -1,11 +1,18 @@
 <html>
 
     <head>
-        <script src="{{ url_for('static', filename='chats.js') }}"></script>
+        
         <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon"/>
     </head>
 
-    <body>
-        Index.html saaaaturs
+    <body onload="lasi_chatu()" class="body">
+        
+        
+        {% block saturs %}
+        {% endblock %}
+
+
+        <script src="{{ url_for('static', filename='chats.js') }}"></script>
+
     </body>
 </html>

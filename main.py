@@ -7,7 +7,7 @@ app = Flask('app')
 @app.route('/')
 def index_page():
   #return "Sveiciens no StartIT! 7"
-  return render_template('index.html')
+  return render_template('chats.html')
 
 
 
