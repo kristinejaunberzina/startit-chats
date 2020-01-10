@@ -33,7 +33,7 @@ def ielasit_chatu():
 def suti_zinu():
   dati = request.json;
 
-  with open("chats.txt", 'a', newline="") as f:
+  with open("chats.txt", 'a', newline="", encoding="UTF-8") as f:
     f.write(dati["chats"]+"\n")
 
   return ielasit_chatu()
