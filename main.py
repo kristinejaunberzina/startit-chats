@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, json, jsonify, request
 
 
 app = Flask('app')
@@ -12,9 +12,32 @@ def index_page():
 
 
 
-@app.route('/health') #what to return
+@app.route('/health')
 def health_check():
   return 'OK'
+
+
+@app.route('/chats/lasi')
+def ielasit_chatu():
+  chata_rindas = []
+  with open("chats.txt", 'r', encoding="UTF-8") as f:
+    for rinda in f:
+      chata_rindas.append(rinda)
+  return jsonify({"chats":chata_rindas})
+
+
+
+
+
+@app.route('/chats/suuti', methods = ['POST'])
+def suti_zinu():
+  dati = request.json;
+
+  with open("chats.txt", 'a', newline="") as f:
+    f.write(dati["chats"]+"\n")
+
+  return ielasit_chatu()
+
 
 
 
