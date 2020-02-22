@@ -4,7 +4,4 @@ trešaasveiciens no postman
 sveiciens no postman
 yolo
 bobo
-tutut
-muris
-rarara
-sanaca
+
