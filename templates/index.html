@@ -7,17 +7,7 @@
         <link href="{{ url_for('static', filename='stils.css') }}" rel="stylesheet"/>
     </head>
 
-    <body onload="lasi_chatu()" onbeforeunload="ConfirmClose()" class="body">
-    <script>
-    function ConfirmClose()
-    {
-        if (event.clientY < 0)
-        {
-            event.returnValue = 'You have closed the browser. Do you want to logout from your application?';
-            setTimeout('myclose=false',10);
-        }
-    }
-    </script>
+    <body onload="lasi_chatu()" class="body">
         
         
         {% block saturs %}
