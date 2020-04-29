@@ -67,6 +67,8 @@ function has_special_commands(stringtoparse)
     
     if(stringtoparse=='exit')
     {
+        rem_player();
+        alert('spēlētājs noņemts')
         special_command_found = true;
     }
     else
