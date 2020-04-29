@@ -34,6 +34,13 @@ async function suti_zinu()
     let zina_elem = document.getElementById('zina');
     let zina = zina_elem.value;
 
+    if( has_special_commands(zina) )
+    {
+        //special command found do nothin
+    }
+    else //add to chat
+    {
+
     zina_elem.value = '';
 
     const atbilde = await fetch('/chats/suuti',
@@ -47,8 +54,29 @@ async function suti_zinu()
     const data_obj = await atbilde.json();
     //radi_chatu_vienkarsi(data_obj);
     raadiChataRindas(data_obj);
+
+    }//no spec commands found add message to chat
 }
 
+
+
+
+function has_special_commands(stringtoparse)
+{
+    var special_command_found = false;
+    
+    if(stringtoparse=='exit')
+    {
+        special_command_found = true;
+    }
+    else
+    {
+        special_command_found = false;
+    }
+
+
+    return special_command_found;
+}
 
 
 
