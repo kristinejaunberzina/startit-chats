@@ -1,9 +1,10 @@
 import os
-from flask import Flask, render_template, request, json, jsonify, request, SQLAlchemy
-#from flask_sqlalchemy import 
+from flask import Flask
+from flask import render_template, request, json, jsonify, request
+#from flask_sqlalchemy import SQLAlchemy
 
 app = Flask('app')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 
 
 @app.route('/')
