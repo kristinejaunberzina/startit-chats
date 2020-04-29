@@ -77,11 +77,18 @@ function has_special_commands(stringtoparse)
     }
 
 
-    if(stringtoparse.startsWith("x=")
+    if(stringtoparse.startsWith("x="))
     {
         special_command_found = true;
         var nr = str.substr(stringtoparse);
         set_player_x(nr);
+    }
+
+    if(stringtoparse.startsWith("y="))
+    {
+        special_command_found = true;
+        var nr = str.substr(stringtoparse);
+        set_player_y(nr);
     }
 
 
