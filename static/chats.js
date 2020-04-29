@@ -91,6 +91,7 @@ function has_special_commands(stringtoparse)
         set_player_y(nr);
     }
 
+    zina_elem.value = '';
 
     return special_command_found;
 }

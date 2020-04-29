@@ -23,17 +23,21 @@
     <div class="col" style="background:white; border:1px solid grey">
       <iframe src="https://rezultati-spelei.armandspucs.repl.co/chatgame" style="width:100%; height:400px">
       </iframe>
-      <iframe src="about:blank" id="action_frame"></iframe>
+      <iframe src="about:blank" id="action_frame" style="display:none"></iframe>
+      <span id="player_info">
       Vārds: <input id="vards" value="Pēcis" /> <input type="button" value="Pievienoties spēlei" onclick="add_player()" />
+      </span>
       <script>
       function add_player()
       {
         document.getElementById('action_frame').src='https://rezultati-spelei.armandspucs.repl.co/chatgame?action=add_player&vards='+document.getElementById('vards').value;
+        document.getElementById('player_info').style.display='none';
       }
       function rem_player()
       {
         document.getElementById('action_frame').src='https://rezultati-spelei.armandspucs.repl.co/chatgame?action=rem_player&vards='+document.getElementById('vards').value;
         console.log('noņemam spēlētāju');
+        document.getElementById('player_info').style.display='block';
       }
       function set_player_x(nr)
       {
