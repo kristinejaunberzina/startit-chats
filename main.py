@@ -1,10 +1,7 @@
-import os
-from flask import Flask
-from flask import render_template, request, json, jsonify, request
-#from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, render_template, request, json, jsonify, request
+
 
 app = Flask('app')
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 
 
 @app.route('/')
@@ -14,19 +11,10 @@ def index_page():
 
 
 
+
 @app.route('/health')
 def health_check():
   return 'OK'
-
-
-
-
-
-
-
-
-
-
 
 
 @app.route('/chats/lasi')
