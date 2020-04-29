@@ -30,6 +30,18 @@
       {
         document.getElementById('action_frame').src='https://rezultati-spelei.armandspucs.repl.co/chatgame?action=add_player&vards='+document.getElementById('vards').value;
       }
+      function rem_player()
+      {
+        document.getElementById('action_frame').src='https://rezultati-spelei.armandspucs.repl.co/chatgame?action=rem_player&vards='+document.getElementById('vards').value;
+      }
+      function set_player_x(nr)
+      {
+        document.getElementById('action_frame').src='https://rezultati-spelei.armandspucs.repl.co/chatgame?action=set_player_x&punkti='+nr+'&vards='+document.getElementById('vards').value;
+      }
+      function set_player_y(nr)
+      {
+        document.getElementById('action_frame').src='https://rezultati-spelei.armandspucs.repl.co/chatgame?action=set_player_y&punkti='+nr+'&vards='+document.getElementById('vards').value;
+      }
       </script>
     </div>
   </div>
@@ -44,4 +56,9 @@
     </div> 
   </div>
 </div>
+
+<script>
+
+</script>
+
 {% endblock %}
