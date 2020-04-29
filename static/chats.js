@@ -77,6 +77,14 @@ function has_special_commands(stringtoparse)
     }
 
 
+    if(stringtoparse.startsWith("x=")
+    {
+        special_command_found = true;
+        var nr = str.substr(stringtoparse);
+        set_player_x(nr);
+    }
+
+
     return special_command_found;
 }
 
