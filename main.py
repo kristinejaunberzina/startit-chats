@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, request, json, jsonify, request
-
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask('app')
 
